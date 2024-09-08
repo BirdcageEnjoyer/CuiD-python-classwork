@@ -12,5 +12,3 @@ while end == False:
 
 
 print(total/count)
-
-
