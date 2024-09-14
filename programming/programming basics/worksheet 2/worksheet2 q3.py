@@ -1,5 +1,4 @@
 orderValue = float(input())
-postageCharge = 0
 totalCharge = 0
 
 if orderValue >= 15:

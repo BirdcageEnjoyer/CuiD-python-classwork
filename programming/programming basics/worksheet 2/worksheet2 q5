@@ -1,0 +1,12 @@
+alarm = 0
+movementGround = 0
+movementFirst = 0
+
+if alarm == True:
+    if movementGround == True and movementFirst == False:
+        print("intrusion is on the ground floor")
+    elif movementGround == False and movementFirst == True:
+        print("intrusion on first floor")
+    elif (movementGround and movementFirst) == True:
+        print("both floors have intruders")
+    
