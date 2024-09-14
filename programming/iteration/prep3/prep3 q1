@@ -1,0 +1,10 @@
+-- a = ""
+-- for i = 1 to 5 do
+--     if i is lowercase then
+--         a = a + i
+--     if i > previous(i) then
+--         a[previous(i)], a[i] = a[i], a[previous(i)]
+--     next
+
+-- print(a[0], a[length(a)])
+    

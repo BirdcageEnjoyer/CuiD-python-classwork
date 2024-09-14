@@ -1,0 +1,10 @@
+-- end = false
+-- while end == false do
+--     password = input("enter the password")
+--     if password == "Tues1212" then
+--         print("password accepted")
+--         break
+--     else:
+--         print("try again")
+--         next
+    
