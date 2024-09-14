@@ -1,0 +1,6 @@
+# temp = input("enter the temperature")
+# humidity = input("enter humidity")
+# if window == "closed" and ((temp > 25) or (humidity > 50)) then
+#     print("open window")
+# elseif (temp < 10) and (humidity < 50) and window == "not closed" then
+#     print("close the window")
