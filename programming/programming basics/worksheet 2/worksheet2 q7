@@ -1,11 +1,11 @@
-temperature = input("do you have a high temperature")
-if temperature == "yes" or "y":
-    throat = input("do you have a sore throat")
-    if throat == "yes" or "y":
-        print("you have a throat infection")
-    elif input("do you have a cough") == "yes" or "y":
-            print("chest infection")
-    else:
-         print("fever")
-else:
-     print("you are fine")
+# temperature = input("do you have a high temperature")
+# if temperature == "yes" or "y":
+#     throat = input("do you have a sore throat")
+#     if throat == "yes" or "y":
+#         print("you have a throat infection")
+#     elif input("do you have a cough") == "yes" or "y":
+#             print("chest infection")
+#     else:
+#          print("fever")
+# else:
+#      print("you are fine")

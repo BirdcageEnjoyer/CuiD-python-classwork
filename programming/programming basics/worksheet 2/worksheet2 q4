@@ -1,18 +1,18 @@
-score = int(input())
-attendance = int(input("is attendance above 90%"))
-grade = 0
-fail = False
-if score > 90 and (attendance == "yes" or "y"):
-    grade = "A"
-elif score > 80 and score <= 90 and (attendance == "yes" or "y"):
-    grade = "B"
-elif score > 70 and score <= 80 and (attendance == "yes" or "y"):
-    grade = "C"
-else:
-    fail = True
+# score = int(input())
+# attendance = int(input("is attendance above 90%"))
+# grade = 0
+# fail = False
+# if score > 90 and (attendance == "yes" or "y"):
+#     grade = "A"
+# elif score > 80 and score <= 90 and (attendance == "yes" or "y"):
+#     grade = "B"
+# elif score > 70 and score <= 80 and (attendance == "yes" or "y"):
+#     grade = "C"
+# else:
+#     fail = True
 
-if fail == False:
-    print("you passed, your grade is:", grade)
-else:
-    print("you failed try harder next time")
+# if fail == False:
+#     print("you passed, your grade is:", grade)
+# else:
+#     print("you failed try harder next time")
 

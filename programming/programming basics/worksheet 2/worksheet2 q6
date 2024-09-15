@@ -1,10 +1,10 @@
-choice = input("choices are 1: economy car, 2: saloon car, and 3: sports car")
-if choice != (1 or 2 or 3):
-    print("invalid choice")
-else: 
-    confirmation = input("do you want to proceed or cancel")
-    if confirmation == "proceed":
-        print("Have a nice day")
-    else:
-        print("canceled, have a nice day")
+# choice = input("choices are 1: economy car, 2: saloon car, and 3: sports car")
+# if choice != (1 or 2 or 3):
+#     print("invalid choice")
+# else: 
+#     confirmation = input("do you want to proceed or cancel")
+#     if confirmation == "proceed":
+#         print("Have a nice day")
+#     else:
+#         print("canceled, have a nice day")
         
