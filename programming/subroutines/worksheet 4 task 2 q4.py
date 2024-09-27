@@ -9,16 +9,32 @@ def setSpacesToEmpty(list):
             row[i] = "empty"
     return list
 
+print(park)
 def parkCar(grid):
-    registration = input("enter car's registration number")
-    gridRefCol = int(input("enter column the car is in"))
-    gridRefRow = int(input("enter row car is parked"))
-    gridSpot = grid[gridRefRow][gridRefCol]
-    while True:
-        if gridSpot != "empty":
+    end = False
+    while end == False:
+        registration = input("enter car's registration number")
+        gridRefCol = input("enter column the car is in")
+        if gridRefCol.isdigit():
+            gridRefCol = int(gridRefCol)
+        else:
+            continue
+        gridRefRow = input("enter row car is parked")
+        if gridRefRow.isdigit():
+            gridRefRow = int(gridRefRow)
+        else:
+            continue
+ 
+
+
+        gridSpot = grid[gridRefRow][gridRefCol]
+
+        if (gridSpot == "empty"):
             gridSpot = registration
             break
-    return "Successfully parked"
+        else:
+            print("try again")
+   
     
 
 a = parkCar(park)
