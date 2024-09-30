@@ -43,3 +43,4 @@ elif optionChosen == 3:
     removeCar(park)
 elif optionChosen == 4:
     displayGrid(park)
+
