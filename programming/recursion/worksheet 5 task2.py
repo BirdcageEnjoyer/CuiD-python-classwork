@@ -1,3 +1,7 @@
+import time
+
+
+
 def fib(n):
     if n <= 1:
         return n
@@ -23,13 +27,21 @@ def callFunctions():
         if n > 30 or n < 3:
             continue
         #endif
+
         choice = int(input("1 for iterative 2 for recursive"))
         if choice == 1:
+            startTime1 = time.time()
             fibonnaci2(n)
+            endTime1 = time.time()
+            print(endTime1)
         elif choice == 2:
+            startTime2 = time.time()
             fib(n)
+            endTime2 = time.time()
+            print(endTime2)
         #endif
     #endwhile
 #endprocedure
 
+callFunctions()
 
