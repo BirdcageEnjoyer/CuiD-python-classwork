@@ -1,4 +1,6 @@
 
+#UPDATE 1 - added bouncing ball
+
 
 
 # Pygame base template for opening a window
@@ -24,10 +26,9 @@ pygame.init()
  
 # Set the width and height of the screen [width, height]
 size = (700, 500)
-canvas_size = (32*700, 32*500)
-gravity = 1
-initialYVel = -100
-initialXVel = -110
+velocityX = 5
+velocityY = 3
+
 screen = pygame.display.set_mode(size)
  
 pygame.display.set_caption("My Game")
@@ -47,14 +48,13 @@ while not done:
  
     # --- Game logic should go here
   
+    x += velocityX
+    y += velocityY
 
-    
-    x+=1
-    y+=1
-    if x >= 600 and y >= 400:
-        x = 1
-        y = 1
-    
+    if x < 0 or x + velocityX > 700:
+        velocityX *= -1
+    if y < 0 or y + velocityY > 500:
+        velocityY *= -1
  
     # --- Screen-clearing code goes here
  
@@ -66,13 +66,8 @@ while not done:
     screen.fill(TEAL)
  
     # --- Drawing code should go here
-    pygame.draw.circle(screen, (0, 255, 0), [x, y], 100)
-    pygame.draw.rect(screen, (0, 255, 0), [0, 400, 700, 100])
-    pygame.draw.rect(screen, (255, 0, 255), [400, 250, 200, 150])
-    pygame.draw.line(screen, (0, 0, 0), [350, 250], [500, 180])
-    pygame.draw.line(screen, (0, 0, 0), [500, 180], [650, 250])
-    pygame.draw.line(screen, (0, 0, 0), [350, 250], [650, 250])
-    
+    circle = pygame.draw.circle(screen, (0, 255, 0), [x, y], 15)
+
     
  
     # --- Go ahead and update the screen with what we've drawn.
