@@ -9,7 +9,7 @@ WIDTH, HEIGHT = 900, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("pong")
 clock = pygame.time.Clock()
-FPS = 30
+FPS = 60
 
 class Striker:
 
@@ -107,15 +107,15 @@ def main():
                     player2yFac = -1
                 if event.key == pygame.K_DOWN:
                     player2yFac = 1
-                if event.key == pygame.K_w:
+                if event.key == pygame.K_q:
                     player1yFac = -1
-                if event.key == pygame.K_s:
+                if event.key == pygame.K_a:
                     player1yFac = 1
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_UP or event.key == pygame.K_DOWN:
                     player2yFac = 0
-                    if event.key == pygame.K_w or event.key == pygame.K_s:
-                        player1yFac = 0
+                if event.key == pygame.K_q or event.key == pygame.K_a:
+                    player1yFac = 0
         for player in listOfPlayers:
             if pygame.Rect.colliderect(ball.getRect(), player.getRect()):
                 ball.hit()
