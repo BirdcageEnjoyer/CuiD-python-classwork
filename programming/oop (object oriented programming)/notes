@@ -1,0 +1,11 @@
+#constructor is a method that is called to create a new object in a class
+#object is an instance of a class
+#a class is a blueprint/template for an object, that contains and assigns the attributes and defines the methods for the object
+#instantiation is the creation of an object from a class
+#encapsulation is taking the attributes, behaviours, methods etc to put it all into a shell and make it private, hiding information
+
+
+# inheritance is the ability to define "child" classes which inherit the attributes and methods of a "parent" class or "super" class
+# e.g pet class has attributs type, name, and colour, methods eat, makeNoise, and move
+# "child" classes would be cat, dog, and we would not need to redefine all the methods and attributes that are in the animal class
+# we can also add extra attributes and methods to each child class and redefine methods is need be (change methods)

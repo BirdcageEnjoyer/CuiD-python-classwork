@@ -2,7 +2,7 @@ import random
 
 
 
-class Dawg:
+class Dog:
     def __init__(self, myName, myColour):
         self.name = myName
         self.color = myColour
@@ -13,6 +13,7 @@ class Dawg:
             print("wof")
         #next    
     #endprocedure
+    
     def setColour(self, colour):
         self.colour = colour
 
@@ -20,7 +21,8 @@ class Dawg:
         return self.colour
 #end class
 
-myDawg = Dawg("jawn", "red")
+myDog = Dog("jawn", "red")
 
-myDawg.setColour("black")
-print(myDawg.getColour())
+myDog.setColour("black")
+print(myDog.getColour())
+
