@@ -1,13 +1,3 @@
-"""
-Use sprites to collect blocks.
- 
-Sample Python/Pygame Programs
-Simpson College Computer Science
-http://programarcadegames.com/
-http://simpson.edu/computer-science/
- 
-Explanation video: http://youtu.be/4W2AqUetBi4
-"""
 import pygame
 import random
  
@@ -17,14 +7,10 @@ WHITE = (255, 255, 255)
 RED   = (255,   0,   0)
  
 class Block(pygame.sprite.Sprite):
-    """
-    This class represents the ball.
-    It derives from the "Sprite" class in Pygame.
-    """
+    
  
     def __init__(self, color, width, height):
-        """ Constructor. Pass in the color of the block,
-        and its size. """
+       
  
         # Call the parent class (Sprite) constructor
         super().__init__()
@@ -39,6 +25,10 @@ class Block(pygame.sprite.Sprite):
         # Update the position of this object by setting the values
         # of rect.x and rect.y
         self.rect = self.image.get_rect()
+
+    def update(self):
+        self.rect.y += 1
+        
  
 # Initialize Pygame
 pygame.init()
@@ -106,7 +96,8 @@ while not done:
     for block in blocks_hit_list:
         score += 1
         print(score)
- 
+    
+    block_list.update()
     # Draw all the spites
     all_sprites_list.draw(screen)
  
