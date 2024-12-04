@@ -26,9 +26,17 @@ class Block(pygame.sprite.Sprite):
         # of rect.x and rect.y
         self.rect = self.image.get_rect()
 
+    def reset_pos(self):
+        self.rect.y = random.randrange(-300, -20)
+        self.rect.x = random.randrange(0, screen_width)
+    
     def update(self):
         self.rect.y += 1
-        
+        if self.rect.y > 410:
+            self.reset_pos()
+
+   
+
  
 # Initialize Pygame
 pygame.init()
@@ -90,12 +98,13 @@ while not done:
     player.rect.y = pos[1]
  
     # See if the player block has collided with anything.
-    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, True)
+    blocks_hit_list = pygame.sprite.spritecollide(player, block_list, False)
  
     # Check the list of collisions.
     for block in blocks_hit_list:
         score += 1
         print(score)
+        block.reset_pos()
     
     block_list.update()
     # Draw all the spites
