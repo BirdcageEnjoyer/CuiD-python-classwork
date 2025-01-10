@@ -1,0 +1,56 @@
+types of software:
+    * applications software - emails e.g outlook
+    * systems software - operating systems, antiviruses
+
+
+software development
+    * analysis
+    * design
+    * implementation (programming, testing, and installation)
+    * evaluation
+    * maintenance
+
+
+
+analysis
+    * system analysts gather info on what the current system does if there is one, and what the new system needs to do
+    * to do this system anaylsts may:
+        - interview people who will use this software
+        - use questionnaires to get information from large groups of people
+        - observe hov the current system works
+        - look at existing documentation
+
+    * output from this stage
+        - system analysts will produce a document called something like "system specification" or "user requirements"
+        - Must
+        - O
+        - Should
+        - Could
+        - O
+        - wONT
+
+        - MVP - Minimum Viable Product
+
+
+design
+    * includes
+        - description of the data: data type, format, validations
+        - database design if appropriate
+        - input screens
+        - output screens and reports
+        - how the data will be processed
+        - how the software will be tested
+
+testing strategies
+    * black box
+        - 
+    * white box
+        - 
+
+    * alpha testing
+        - carried out by software develope's in-house team and by the user
+        - can reveal errors or omissions in the definition of the system requirements
+        - the user may discover that the system does not do exactly what they wanted
+
+    * beta testing
+        - used when commercial
