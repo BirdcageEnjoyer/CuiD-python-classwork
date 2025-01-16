@@ -38,14 +38,16 @@ design
         - database design if appropriate
         - input screens
         - output screens and reports
-        - how the data will be processed
+        - how the data will be processed\\
         - how the software will be tested
 
 testing strategies
     * black box
-        - 
+        - testing without seeing the code
+        - mostly done by non developers
     * white box
-        - 
+        - testing while seeing the code
+        - mostly used by developer
 
     * alpha testing
         - carried out by software develope's in-house team and by the user
@@ -54,3 +56,20 @@ testing strategies
 
     * beta testing
         - used when commercial
+
+
+
+maintenance
+    * corrective - bugs will usually occur when software put into action, no matter how thoroughly it was tested
+    * adaptive - over time, user requirements change and software needs to be adapted to new needs
+    * perfective - even if software works well, there may be ways to make it even better, everything includign quality of life
+    - then cycle repeats
+
+waterfall model
+    * analysis
+    * design
+    * implementation
+    * evaluation
+    * maintenance
+
+    
