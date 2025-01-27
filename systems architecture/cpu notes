@@ -1,0 +1,47 @@
+Control signals:
+    memory read: causes data from addressed location in RAM to be placed on the data sus
+    memory write: causes data on databus to be written into addressed location in RAM
+    bus request: indicates that a device is requesting use of the data bus
+    bus grant: indicate that the cpu has granted access to the data bus 
+    clock: used to synchronise operation
+
+ALU:
+    * performs arithemetic, logical and shift operations on data
+
+Accumulator:
+    * results from ALU need to be stored somewhere so they are stored here.
+    * the accumulator is a super-fast memory, getting data from secondary might take a few hundred clock cycles, from cache a few tens of cycles
+    but from the a super-fast, 1 clock cycle. It has to be as fast as the CPU.
+
+Current Instruction Register:
+    * holds the current instruction, which is split into OPCODE and OPERAND
+        - opcode is the instruction on what to do
+        - operand refers to the address of the data in the ram to have the action done to, or actual data to be used
+    * we have to retrieve data and overrite MDR during FDE cycle so we need this to hold onto cycle.
+
+Program Counter:
+    * holds memory address of the next instruction to be executed
+
+Memory Address Register:
+    * hold the address in memory where the processor is required to fetch or store data from or to
+
+Memory Data Register:
+    *temporarily holds data moving between main memory and processor
+
+
+FETCH DECODE EXECUTE:
+    * Instructions are fetched, we dont fetch data. - MDR and MAR used
+    * Instructions are decoded
+    * Instructions are executed - data is retrieved - MDR and MAR used
+
+    * Fetch: address of next instruction from PC copied into MAR, instruction held at that address in main memory is copied to MDR, PC incremented, contents of MDR are copied into CIR
+
+    * Decode: the instruction is decoded by splitting into opcode, and operand in CIR, if additional data required, it is retrieved from memory.Finally passed into accumulator
+
+    * Execute: instruction executed and result held in accumulator or stored back into main memory.
+
+    Summary
+    * first we look at PC, copy the current instruction address into MAR, use MAR's stored value as address to find the instruction in RAM
+    then copy the instruction into MDR, which then the instruction is copied to CIR, and PC increments, we then decode the instruction in CIR and decodes the instruction into OPCODE, and OPERAND. OPCODE is what we will do with the data that we retrieve, OPERAND is the memory address of the data in the RAM. The operand is copied into MAR, then using MAR, we find the data/instruction in the in RAM, copy it into MDR, and perform the OPCODE on the value stored in MDR/run that instruction (repeat steps), and finally stored to accumulator.
+
+
