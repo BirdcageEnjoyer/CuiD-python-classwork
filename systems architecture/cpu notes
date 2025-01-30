@@ -45,3 +45,29 @@ FETCH DECODE EXECUTE:
     then copy the instruction into MDR, which then the instruction is copied to CIR, and PC increments, we then decode the instruction in CIR and decodes the instruction into OPCODE, and OPERAND. OPCODE is what we will do with the data that we retrieve, OPERAND is the memory address of the data in the RAM. The operand is copied into MAR, then using MAR, we find the data/instruction in the in RAM, copy it into MDR, and perform the OPCODE on the value stored in MDR/run that instruction (repeat steps), and finally stored to accumulator.
 
 
+Time slicing:
+    * a single core processor can run software concurrently, e.g run software A then start running B before A finishes
+    through time slicing
+    * this is where software A is processed with gaps since the CPU doesnt need to be actively constantly focusing on one, since it is fast enough
+    therefore in the gaps that it doesnt focus on processing software A, it will run software B and work on that.
+
+Cache memory:
+    * small amount of superfast but expensive memory that store data and instructions that have recently been used by processor
+        - level 1, level 2 cache, sometimes level 3 cache
+            - level 1 cache is split into instruction and date caches, so they can be fetched simultaneously
+        - the more memory cache has, the more likely it doesnt have to fetch from RAM as it will already have been loaded into the superfast cache memory from which it can be retrieved much more quickly.
+
+
+PIPELINING
+    * technique used to improve performance, for example by overlapping stages in FDE cycle or by breaking down the stages in an arithmetic instruction
+        - an instruction enters the pipeline, and as soon as one stage has been completed, another instruction enters the pipeline
+        - a third instruction then enters before either of the otehrs is completed
+        - there may be 10 or 12 stages in the pipeline with some stages taking longer than others.
+                1   2   3   4   5
+            Ins1 F  D   E
+            Ins2    F   D   E
+            Ins3        F   D   E
+
+            basically, as soon as instruction 1 is fetched, the cpu works on fetching the second while the first is being decodedd, then when first is decoded, second instruction gets decoded, while 3rd is fetched since 2nd has been fetched, etc...
+        
+        ** before completely finishing an instruction, begin another as soon as one stage is available to do.
