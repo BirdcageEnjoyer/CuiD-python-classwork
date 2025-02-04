@@ -1,0 +1,16 @@
+Mnemonic code  
+ADD  = 1xx, where xx is the operand and 1 is opcode  
+SUB
+STA - store to the accumulator the number it is followed by
+LDA - load onto accumulator 
+variable DAT - variable
+
+e.g, input 10 and 3 what is the output from this code:
+INP wait for user to input data
+STA num1 store the number input by user in num1
+INP wait for user to input data
+ADD num1 add num1 to the value in the accumulator
+OUT output contents of the accumulator
+num1 DAT
+
+    13 is output
