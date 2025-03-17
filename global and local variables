@@ -1,0 +1,10 @@
+global variables - exist for life of program, created when the program starts
+local variables - exist are temporary, only for life of subroutine, or where its defined, created on the stack
+variables for two types:
+    - value variables - primitive data types, simple composite data types e.g string
+    - reference variables - objects, records, lists, arrays, if dynamic definitely reference since they might grow and shrink
+
+global scope - can be used anywhere in program
+local scope - can only be used in the subroutine it is defined in
+
+* you can have same names for local and global variables since they are used in different scopes
