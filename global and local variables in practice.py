@@ -84,8 +84,6 @@
 #     shiftRight = True
 #   count += 1
 # print(encryptedmsg)
-    
-inpt = ""
-for i in range(0,6):
-    inpt = input()
-    print(inpt)
+
+
+
