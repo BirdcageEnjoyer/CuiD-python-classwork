@@ -54,37 +54,38 @@
 
 # print(''.join(missingChrs))
 
-sentence = input()
-sentencesplit = sentence.split()
-workspace = ""
-pi = '31415926535897932384626433832795028841971693993751'
-for word in sentencesplit:
-  workspace += word
+# sentence = input()
+# sentencesplit = sentence.split()
+# workspace = ""
+# pi = '31415926535897932384626433832795028841971693993751'
+# for word in sentencesplit:
+#   workspace += word
 
-encryptedmsg = ""
-shiftRight = True
-alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
-count = 0
-while count < len(workspace):
-  positionInAlphabet = 0
-  moveCount = int(pi[count])
-  for letter in alphabet:
-    if workspace[count] != letter.upper():
-      positionInAlphabet +=1
-    else:
-      break
+# encryptedmsg = ""
+# shiftRight = True
+# alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+# count = 0
+# while count < len(workspace):
+#   positionInAlphabet = 0
+#   moveCount = int(pi[count])
+#   for letter in alphabet:
+#     if workspace[count] != letter.upper():
+#       positionInAlphabet +=1
+#     else:
+#       break
 
-  if shiftRight == True:
-    position = positionInAlphabet + moveCount
-    encryptedmsg += alphabet[position].upper()
-    shiftRight = False
-  else:
-    position = positionInAlphabet - moveCount
-    encryptedmsg += alphabet[position].upper()
-    shiftRight = True
-  count += 1
-print(encryptedmsg)
+#   if shiftRight == True:
+#     position = positionInAlphabet + moveCount
+#     encryptedmsg += alphabet[position].upper()
+#     shiftRight = False
+#   else:
+#     position = positionInAlphabet - moveCount
+#     encryptedmsg += alphabet[position].upper()
+#     shiftRight = True
+#   count += 1
+# print(encryptedmsg)
     
-
-
-
+inpt = ""
+for i in range(0,6):
+    inpt = input()
+    print(inpt)
