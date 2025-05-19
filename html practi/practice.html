@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Seat</title> 
+  <style>
+    
+  </style>
+</head>
+<body>
+  <div>
+    <h2 id="msinForm">Book Your Seat</h2>
+    <form id="seatForm" action="booking-server.html" method="get" onsubmit="return validateForm()">
+      <label for="row">Row (1–30):</label>
+      <input type="text" id="row" name="row" required>
+
+
+      <label for="seat">Seat (A–F):</label>
+      <input type="text" id="seat" name="seat" required>
+
+
+      <button type="submit">Book Seat</button>
+      <p id="errorMsg"></p>
+    </form>
+  </div>
+
+  <script>
+    function validateForm() {
+      var row = document.getElementById("row").value;
+      var seat = document.getElementById("seat").value;
+      var seatLength = seat.length;
+      if (row > 30 || row < 1 || seat > "F" || seatLength > 1) {
+        return false;
+      } else {
+        return true;
+      }  
+    }
+  </script>
+</body>
+</html>
